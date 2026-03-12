@@ -1,5 +1,4 @@
-﻿
-public enum couleurs 
+﻿public enum Couleurs 
 {
     Coeur = 1,
     Carreau,
@@ -9,8 +8,8 @@ public enum couleurs
 
 public enum Valeurs 
 {
-    As = 1,
-    Deux,
+   
+    Deux = 2,
     Trois,
     Quatre,
     Cinq,
@@ -22,4 +21,12 @@ public enum Valeurs
     Valet,
     Reine,
     Roi,
+    As
+}
+
+public struct Carte
+{
+    public Couleurs Couleur;
+
+    public Valeurs valeur;
 }
