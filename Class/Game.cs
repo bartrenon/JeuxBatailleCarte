@@ -4,7 +4,7 @@
 
     public Joueur j2;
 
-    public Queue<Carte> deckCarte;
+    public Queue<Carte> deckCarte = new Queue<Carte>();
 
     public Game(Joueur j1, Joueur j2, Deck d)
     {
