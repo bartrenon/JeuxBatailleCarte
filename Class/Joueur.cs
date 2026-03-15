@@ -6,6 +6,11 @@
 
     public Queue<Carte> deckCarte;
 
+    public Joueur(string name) 
+    {
+        this.name = name;
+    }
+
     public int getScore()
     {
         return this.score;
