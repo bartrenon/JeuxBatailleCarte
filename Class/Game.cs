@@ -16,5 +16,20 @@
             deckCarte.Enqueue(d.deckCarte[i]);
         }
     }
+
+    public void distribuerCarte() 
+    {
+        for (int i = 0; i < deckCarte.Count(); i++)
+        {
+            if(i%2 != 0) 
+            {
+                j1.deckCarte.Enqueue(deckCarte.Dequeue());
+            }
+            else 
+            {
+                j2.deckCarte.Enqueue(deckCarte.Dequeue());
+            }
+        }
+    }
 }
 
