@@ -31,5 +31,35 @@
             }
         }
     }
+
+    public void gagnerManche(Carte c1, Carte c2)
+    {
+       if((int)c1.valeur > (int)c2.valeur)
+       {
+            j1.setScore();
+            Console.WriteLine($"victoir de {j1.name}");
+       }
+       else if((int)c1.valeur < (int)c2.valeur)
+       {
+            Console.WriteLine($"victoir de {j2.name}");
+            j2.setScore();
+        }
+
+        Console.WriteLine("égalité");
+    }
+
+    public void gagnerMatch()
+    {
+        if(j1.score > j2.score)
+        {
+             Console.WriteLine($"victoir de {j1.name} avec {j1.score} sur {j2.score + j1.score} manches");
+        }
+        else if (j1.score < j2.score)
+        {
+             Console.WriteLine($"victoir de {j2.name} avec {j2.score} sur {j2.score + j1.score} manches");
+        }
+
+        Console.WriteLine("Match null entre les deux joueurs");
+    }
 }
 
