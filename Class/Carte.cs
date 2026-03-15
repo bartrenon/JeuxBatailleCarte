@@ -1,11 +1,17 @@
 ﻿public class Carte
 {
-    public Couleurs couleur { get; };
+    public Couleurs couleur;
 
-    public Valeurs valeur { get; };
+    public Valeurs valeur ;
 
-    public getCarte(Valeurs valeur, Couleurs couleur)
+    public Carte(Couleurs couleur, Valeurs valeur)
     {
-        Console.WriteLine($"Carte: {valeur} {couleur}");
+        this.couleur = couleur;
+        this.valeur = valeur;
+    }
+
+    public void getCarte()
+    {
+        Console.WriteLine($"Carte: {this.valeur} {this.couleur}");
     }
 }

@@ -1,10 +1,10 @@
 ﻿public class Joueur
 {
-    public string name { get; };
+    public string name;
 
-    public Carte[26] DeckCarte { get; set; };
+    public Carte[] DeckCarte;
 
-    public getJoueur()
+    public void getJoueur()
     {
         Console.WriteLine($"Carte: {name}");
     }
