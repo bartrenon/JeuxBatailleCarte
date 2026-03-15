@@ -4,20 +4,14 @@
 
     public Joueur j2;
 
-    public int score1;
-
-    public int score2;
-
     public Queue<Carte> deckCarte;
 
     public int nbCarte;
 
-    public Game(Joueur j1, Joueur j2, int score1, int score2, int nbCarte)
+    public Game(Joueur j1, Joueur j2, int nbCarte)
     {
         this.j1 = j1;
         this.j2 = j2;
-        this.score1 = score1;
-        this.score2 = score2;
         this.nbCarte = nbCarte;
 
         this.deckCarte = new Queue<Carte>();

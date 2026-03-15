@@ -2,10 +2,17 @@
 {
     public string name;
 
+    public int score = 0;
+
     public Carte[] DeckCarte;
 
-    public void getJoueur()
+    public int getScore()
     {
-        Console.WriteLine($"Carte: {name}");
+        return this.score;
+    }
+
+    public void setScore() 
+    {
+        return this.score++;
     }
 }
