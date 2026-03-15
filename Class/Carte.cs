@@ -12,6 +12,6 @@
 
     public void getCarte()
     {
-        Console.WriteLine($"Carte: {this.valeur} {this.couleur}");
+        Console.WriteLine($"{this.valeur} : {this.couleur}");
     }
 }

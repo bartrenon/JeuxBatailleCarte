@@ -4,7 +4,7 @@
 
     public int score = 0;
 
-    public Carte[] DeckCarte;
+    public Queue<Carte> deckCarte;
 
     public int getScore()
     {
@@ -13,6 +13,6 @@
 
     public void setScore() 
     {
-        return this.score++;
+        this.score++;
     }
 }

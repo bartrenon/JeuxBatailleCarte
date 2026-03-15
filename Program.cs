@@ -1,3 +1,9 @@
 ﻿
-Carte c = new Carte(Couleurs.1, Valeurs.2);
+Console.WriteLine("teste");
+
+Deck d = new Deck(52);
+
+d.melangerDeck();
+d.getDeck();
+
 
