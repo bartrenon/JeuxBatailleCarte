@@ -13,7 +13,7 @@
 
     public Carte jouerCarte()
     {
-        return deckCarte.Enqueue(d.deckCarte[i]);
+        return deckCarte.Dequeue();
     }
 
     public int getScore()
@@ -24,5 +24,12 @@
     public void setScore() 
     {
         this.score++;
+    }
+    public void getDeck()
+    {
+        foreach (Carte carte in deckCarte)
+        {
+            carte.getCarte();
+        }
     }
 }

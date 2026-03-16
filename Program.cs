@@ -1,34 +1,72 @@
 ﻿bool continuer = true;
-string choix, nom;
+string choix;
 
+Console.WriteLine("Bonjour voulez vous jouer ? oui/non");
+choix = Console.ReadLine();
 
 while (continuer)
 {
-    Console.WriteLine("Bonjour voulez vous jouer ? oui/non");
-    Console.ReadLine(choix);
 
-    if(choix == "non") 
+    if (choix == "non")
     {
         continuer = false;
+        break;
     }
 
     Console.WriteLine("Entrez le nom de joueur 1");
-    Console.ReadLine(nom);
-    Joueur j1 = new Joueur("bart");
+    Joueur j1 = new Joueur(Console.ReadLine());
 
     Console.WriteLine("Entrez le nom de joueur 2");
-    Console.ReadLine(nom);
-    Joueur j2 = new Joueur("léa");
+    Joueur j2 = new Joueur(Console.ReadLine());
 
     Deck deck = new Deck(52);
     deck.melangerDeck();
     Game game = new Game(j1, j2, deck);
 
-    game.distribuerCarte;
+    game.distribuerCarte();
 
-    for (int = 0; int <= (deck.nbcarte/2); int++)
+    for (int i = 1; i <= (deck.nbcarte / 2); i++)
     {
-        game.gagnerManche(j1);
+        game.gagnerManche(j1.jouerCarte(), j2.jouerCarte());
     }
 
+    game.gagnerMatch();
+
+    Console.WriteLine("Voulez vous re jouer ? oui/non");
+    choix = Console.ReadLine();
+}
+
+Console.WriteLine("Bonjour voulez vous jouer ? oui/non");
+choix = Console.ReadLine();
+
+while (continuer)
+{
+
+    if(choix == "non") 
+    {
+        continuer = false;
+        break;
+    }
+
+    Console.WriteLine("Entrez le nom de joueur 1");
+    Joueur j1 = new Joueur(Console.ReadLine());
+
+    Console.WriteLine("Entrez le nom de joueur 2");
+    Joueur j2 = new Joueur(Console.ReadLine());
+
+    Deck deck = new Deck(52);
+    deck.melangerDeck();
+    Game game = new Game(j1, j2, deck);
+
+    game.distribuerCarte();
+
+    for (int i = 1; i <= (deck.nbcarte/2) ; i++)
+    {
+        game.gagnerManche(j1.jouerCarte(),j2.jouerCarte());
+    }
+
+    game.gagnerMatch();
+
+    Console.WriteLine("Voulez vous re jouer ? oui/non");
+    choix = Console.ReadLine();
 }
