@@ -27,12 +27,16 @@ while (continuer)
 
     for (int i = 1; i <= (deck.nbcarte / 2); i++)
     {
-        game.gagnerManche(j1.jouerCarte(), j2.jouerCarte());
+        Console.WriteLine($"{j1.name} : {j1.score} VS {j2.name} : {j2.score}");
 
-        Console.clear();
+        Console.WriteLine($"{j1.deckCarte.Peek().getCarte()} VS {j2.deckCarte.Peek().getCarte()}");
+
+        game.gagnerManche(j1.jouerCarte(), j2.jouerCarte());
 
         Console.WriteLine("Appuie sur une touche pour continuer");
         Console.ReadLine();
+
+        Console.Clear();
     }
 
     game.gagnerMatch();

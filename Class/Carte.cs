@@ -10,8 +10,8 @@
         this.valeur = valeur;
     }
 
-    public void getCarte()
+    public string getCarte()
     {
-        Console.WriteLine($"{this.valeur} : {this.couleur}");
+        return $"{this.valeur} de {this.couleur}";
     }
 }
