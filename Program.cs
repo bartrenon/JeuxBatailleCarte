@@ -13,11 +13,15 @@ while (continuer)
         break;
     }
 
+    Console.Clear();
+
     Console.WriteLine("Entrez le nom de joueur 1");
     Joueur j1 = new Joueur(Console.ReadLine());
 
     Console.WriteLine("Entrez le nom de joueur 2");
     Joueur j2 = new Joueur(Console.ReadLine());
+
+    Console.Clear();
 
     Deck deck = new Deck(52);
     deck.melangerDeck();

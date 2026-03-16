@@ -46,8 +46,10 @@
             Console.WriteLine($"victoir de {j2.name}");
             j2.setScore();
         }
-
-        Console.WriteLine("égalité");
+        else 
+        {
+            Console.WriteLine("égalité");s
+        }
     }
 
     public void gagnerMatch()
